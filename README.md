@@ -75,43 +75,40 @@ The results demonstrate that different clustering algorithms can produce differe
 The project followed an Unsupervised Machine Learning workflow:
 
 ```text
-Raw Spotify Dataset
-        │
-        ▼
-Data Loading & Exploration
-        │
-        ▼
-Data Cleaning & Preprocessing
-        │
-        ▼
-Feature Selection
-        │
-        ▼
-Feature Scaling
-        │
-        ▼
-Dimensionality Reduction
-        │
-        ▼
-Clustering Algorithms
-        │
-        ├───────────────┐
-        ▼               ▼
-     K-Means          DBSCAN
-        │               │
-        └───────┬───────┘
-                │
-                ▼
-     Agglomerative Clustering
-                │
-                ▼
-       Cluster Evaluation
-                │
-                ▼
-      t-SNE Visualization
-                │
-                ▼
-       Result Interpretation
+                Raw Spotify Dataset
+                        │
+                        ▼
+                Data Loading & Exploration
+                        │
+                        ▼
+                Data Cleaning & Preprocessing
+                        │
+                        ▼
+                Feature Selection
+                        │
+                        ▼
+                Feature Scaling
+                        │
+                        ▼
+                Dimensionality Reduction
+                        │
+                        ▼
+                Clustering Algorithms
+                        |
+            ┌───────────┼───────────┐
+            ▼           ▼           ▼
+         K-Means      DBSCAN    Agglomerative
+                               Clustering
+            |           |           |
+            └───────────┼───────────┘
+                        ▼
+                 Cluster Evaluation
+                        |
+                        ▼
+                 t-SNE Visualization
+                        |
+                        ▼
+                 Result Interpretation
 ```
 
 ---
