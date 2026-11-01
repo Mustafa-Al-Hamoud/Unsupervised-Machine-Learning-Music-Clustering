@@ -255,13 +255,20 @@ Can density-based clustering identify groups of similar songs and detect noise p
 
 **Objective**
 
-How can hierarchical clustering reveal nested groups of similar songs?
+How can hierarchical clustering reveal groups of similar songs based on their musical characteristics?
 
 <p align="center">
 
-<img src="images/agglomerative_dendrogram.png" width="75%">
+<img src="images/agglomerative_dendrogram.png" width="90%">
 
 </p>
+
+### Key Insights
+
+- The Dendrogram illustrates the hierarchical merging of song groups based on Euclidean distances.
+- Ward linkage was used to determine how clusters are merged.
+- Nine clusters were selected based on the Dendrogram analysis.
+- The resulting clusters contain different numbers of songs.
 
 <p align="center">
 
@@ -269,13 +276,13 @@ How can hierarchical clustering reveal nested groups of similar songs?
 
 </p>
 
-### Key Insights
+### Cluster Visualization
 
-- The Dendrogram was used to investigate and select the number of clusters.
-- Nine clusters were selected for the final Agglomerative Clustering model.
-- Ward linkage and Euclidean distance were used.
-- The resulting clusters contain different numbers of songs.
-- t-SNE visualizes the distribution of the nine clusters in two dimensions.
+The t-SNE visualization presents the nine clusters in a two-dimensional space.
+
+- Different colors represent the nine cluster assignments.
+- The visualization reveals variations in the distribution and size of the clusters.
+- Some groups appear visually separated, while others show partial overlap in the two-dimensional representation.
 
 ---
 
