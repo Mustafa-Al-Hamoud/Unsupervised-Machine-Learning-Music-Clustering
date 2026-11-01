@@ -217,13 +217,11 @@ How much information can be retained when reducing the dimensionality of the mus
 - The cumulative explained variance helps determine the number of components required.
 - The selected PCA transformation retains 95% of the explained variance.
 
----
-
 ## K-Means Clustering
 
 **Objective**
 
-How can songs be grouped based on similarities in their musical characteristics?
+How can songs be grouped based on similarities in their musical characteristics, and how can the optimal number of clusters be determined?
 
 <p align="center">
 
@@ -232,20 +230,23 @@ How can songs be grouped based on similarities in their musical characteristics?
 
 </p>
 
+### Key Insights
+
+- The Elbow Method shows a significant decrease in inertia up to approximately four clusters, followed by a more gradual reduction.
+- The Silhouette Score reaches nearly identical maximum values for three and four clusters (approximately 0.332).
+- Based on both evaluation methods, four clusters were selected for the final K-Means model.
+
 <p align="center">
 
 <img src="images/kmeans_radar_chart.png" width="75%">
 
 </p>
 
-### Key Insights
+### Cluster Characteristics
 
-- The Elbow Method and Silhouette Score were used to investigate a suitable number of clusters.
-- Four clusters were selected for the final K-Means model.
-- The Radar Chart helps compare the average musical characteristics of the resulting clusters.
-- The clusters show differences in features such as Energy, Danceability, Acousticness, and Instrumentalness.
+The Radar Chart compares the average musical features of the four clusters.
 
----
+It helps identify differences in musical characteristics such as Danceability, Energy, Acousticness, Instrumentalness, Tempo, and Valence.
 
 ## DBSCAN Clustering
 
