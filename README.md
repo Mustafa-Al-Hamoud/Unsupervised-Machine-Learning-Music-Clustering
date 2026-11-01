@@ -198,24 +198,6 @@ Main tasks include:
 
 The project uses several visualizations to understand the data, evaluate clustering decisions, and explore the resulting groups.
 
-## PCA – Explained Variance
-
-**Objective**
-
-How much information can be retained when reducing the dimensionality of the musical features?
-
-<p align="center">
-
-<img src="images/pca_explained_variance.png" width="48%">
-<img src="images/pca_cumulative_variance.png" width="48%">
-
-</p>
-
-### Key Insights
-
-- The first principal components explain a larger proportion of the total variance.
-- The cumulative explained variance helps determine the number of components required.
-- The selected PCA transformation retains 95% of the explained variance.
 
 ## K-Means Clustering
 
@@ -252,7 +234,7 @@ It helps identify differences in musical characteristics such as Danceability, E
 
 **Objective**
 
-Can density-based clustering identify groups of similar songs and detect outliers?
+Can density-based clustering identify groups of similar songs and detect noise points and outliers?
 
 <p align="center">
 
@@ -263,12 +245,11 @@ Can density-based clustering identify groups of similar songs and detect outlier
 
 ### Key Insights
 
-- The K-Distance Graph was used to estimate a suitable eps value.
-- DBSCAN identifies clusters based on the density of neighboring data points.
-- Songs that do not belong to any cluster are classified as noise.
-- t-SNE provides a two-dimensional view of the resulting clusters and noise points.
-
----
+- The K-Distance Graph was used to investigate a suitable eps parameter based on the distance to the third nearest neighbor.
+- DBSCAN identified seven clusters based on the density of neighboring data points.
+- Songs that did not belong to any cluster were classified as noise or outliers.
+- The t-SNE visualization provides a two-dimensional representation of the resulting clusters and noise points.
+- The resulting clusters vary considerably in their visual size and distribution.
 
 ## Agglomerative Clustering
 
